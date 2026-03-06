@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de Filmes</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Cadastro de Filmes</h1>
+    <button onclick="abrirModal()">+ Novo Filme</button>
+</header>
+
+<main>
+
+<select id="filtroGenero" onchange="renderizarTabela()">
+<option value="todos">Todos</option>
+<option value="Animação">Animação</option>
+<option value="Ação">Ação</option>
+<option value="Aventura">Aventura</option>
+<option value="Comédia">Comédia</option>
+<option value="Drama">Drama</option>
+<option value="Ficção Científica">Ficção Científica</option>
+<option value="Infantil">Infantil</option>
+<option value="Musical">Musical</option>
+<option value="Romance">Romance</option>
+<option value="Suspense">Suspense</option>
+<option value="Terror">Terror</option>
+</select>
+
+<table>
+<thead>
+<tr>
+<th>Capa</th>
+<th>Nome</th>
+<th>Gênero</th>
+<th>Ano</th>
+<th>Classificação</th>
+<th>Produtora</th>
+<th>Ações</th>
+</tr>
+</thead>
+
+<tbody id="dados"></tbody>
+
+</table>
+
+</main>
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<h2>Filme</h2>
+
+<input type="text" id="capa" placeholder="URL da capa">
+
+<input type="text" id="nome" placeholder="Nome do filme">
+
+<select id="genero">
+<option value="">Selecione o gênero</option>
+<option>Animação</option>
+<option>Ação</option>
+<option>Aventura</option>
+<option>Comédia</option>
+<option>Drama</option>
+<option>Ficção Científica</option>
+<option>Infantil</option>
+<option>Musical</option>
+<option>Romance</option>
+<option>Suspense</option>
+<option>Terror</option>
+</select>
+
+<input type="number" id="ano" placeholder="Ano">
+
+<input type="number" id="classificacao" placeholder="Classificação">
+
+<input type="text" id="produtora" placeholder="Produtora">
+
+<div class="modal-buttons">
+<button onclick="salvarFilme()">Salvar</button>
+<button onclick="fecharModal()">Cancelar</button>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
